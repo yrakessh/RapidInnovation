@@ -1,0 +1,4 @@
+{
+    "mongoURI": "mongodb+srv://sports:foLJ30Ixge7TA5kL@cluster0.yfkae.mongodb.net/sportsclub?retryWrites=true&w=majority",
+    "jwtSecret": "sportsToken"
+}

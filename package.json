@@ -1,0 +1,30 @@
+{
+  "name": "RapidInnovation",
+  "version": "1.0.0",
+  "description": "Sports Club",
+  "main": "index.js",
+  "scripts": {
+    "server": "node app",
+    "dev": "nodemon app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yrakessh/RapidInnovation.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yrakessh/RapidInnovation/issues"
+  },
+  "homepage": "https://github.com/yrakessh/RapidInnovation#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "config": "^3.3.6",
+    "express": "^4.17.1",
+    "express-validator": "^6.13.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.0.11",
+    "nodemon": "^2.0.14"
+  }
+}
