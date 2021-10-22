@@ -20,7 +20,12 @@ $ npm install -g  nodemon // for local environment
 Please find the sample envconfig config/default.json
 
 Update the environment specific values in the config/default.json file
-
+```
+{
+    "mongoURI": "<yourmongodburi>",
+    "jwtSecret": "<yoursecretkey>"
+}
+```
 ## Run
 
 Please the the below command to start the server
