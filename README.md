@@ -10,7 +10,7 @@ Clone the repo by using command git clone. see example below.
 
 Please follow the below command to install all the required dependancy
 ```
-$ cd smart-search
+$ cd RapidInnovation
 $ npm install
 $ npm install -g  nodemon // for local environment
 ```
