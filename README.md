@@ -26,6 +26,8 @@ Update the environment specific values in the config/default.json file
     "jwtSecret": "<yoursecretkey>"
 }
 ```
+For the testing purpose, mongoURI will be added in the config as it has sample data
+
 ## Run
 
 Please the the below command to start the server
