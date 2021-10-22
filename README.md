@@ -4,7 +4,7 @@
 
 Clone the repo by using command git clone. see example below.
 
-`git clone  https://github.com/yrakessh/RapidInnovation.git`
+`$ git clone  https://github.com/yrakessh/RapidInnovation.git`
 
 ## Install
 
