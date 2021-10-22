@@ -8,14 +8,16 @@ git clone
 * Clone
 
 Clone the repo by using command git clone. see example below.
-$ git clone  https://github.com/yrakessh/RapidInnovation.git
+
+`git clone  https://github.com/yrakessh/RapidInnovation.git`
 
 * Install
 
 Please follow the below command to install all the required dependancy
+```
 $ cd smart-search
 $ npm install
-$ npm install -g  nodemon // for local environment
+$ npm install -g  nodemon // for local environment```
 
 * Configurations
 
