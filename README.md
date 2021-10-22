@@ -1,6 +1,4 @@
-# RapidInnovation
-
-# Setup
+# RapidInnovation - Setup
 
 ## Clone
 
@@ -25,7 +23,7 @@ Update the environment specific values in the config/default.json file
 
 ## Run
 
-Please the the below command to start the service
+Please the the below command to start the server
 
 ```
 Start service using npm
