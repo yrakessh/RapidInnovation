@@ -1,30 +1,23 @@
 # RapidInnovation
 
 Clone Git
-git clone https://github.com/yrakessh/RapidInnovation.git
+git clone
 
-#Setup
+# Setup
 
-
-
-
-Clone
+* Clone
 
 Clone the repo by using command git clone. see example below.
-$ git clone https://gitlab.com/breeze-framework/search/smart-search.git
+$ git clone  https://github.com/yrakessh/RapidInnovation.git
 
-
-
-Install
+* Install
 
 Please follow the below command to install all the required dependancy
 $ cd smart-search
 $ npm install
 $ npm install -g  nodemon // for local environment
 
-
-
-Configurations
+* Configurations
 
 Required directory need to present to run the service the directories are secrets and logs please find the commands below to create directory and configure envvconfig
 $ sudo mkdir /secrets                        // This directory contain envconfig file
@@ -36,13 +29,11 @@ Please find the sample envconfig searchEnvConfig.js
 Update the environment specific values in the searchEnvConfig.js file
 
 
-
-
-Run
+* Run
 
 Please the the below command to start the service
 
-On local environment
+* On local environment
 
 Start service using npm
 $ cd smart-search         // Locate to service directory
