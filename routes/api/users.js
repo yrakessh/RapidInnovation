@@ -8,27 +8,6 @@ const config = require('config')
 
 // @router POST api/users
 // @desc Register User
-// @access public
-/* Request Body
-{
-    "name": "Rakesh Yadav",
-    "email": "yrakessh@gmail.com",
-    "password": "1234567",
-    "role": "admin"
-} 
-
-{
-    "name": "Ravi Sashtri",
-    "email": "ravi@gmail.com",
-    "password": "1234567",
-    "role": "coach"
-}
-
-Response: - 
-{
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjE3MjI0MzNlZTVmMDVlMjAwYTA1NzkzIn0sImlhdCI6MTYzNDg3MTg0MywiZXhwIjoxNjM1MjMxODQzfQ.vOjyP_A22gWi1LolhxFiSey8c5lt5I8D3niiRxlY5iI"
-}
-*/
 router.post('/', [
     check('name', 'Name is required').not().isEmpty(),
     check('email', 'Please enter valid email').isEmail(),

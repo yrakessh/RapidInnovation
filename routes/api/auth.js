@@ -22,18 +22,6 @@ router.get('/', auth, async (req, res) => {
 
 // @router POST api/auth
 // @desc Register User
-// @access public
-/* Request Body
-{
-    "email": "yrakessh@gmail.com",
-    "password": "1234567"
-} 
-
-Response: - 
-{
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjE3MjI0MzNlZTVmMDVlMjAwYTA1NzkzIn0sImlhdCI6MTYzNDg3MTg0MywiZXhwIjoxNjM1MjMxODQzfQ.vOjyP_A22gWi1LolhxFiSey8c5lt5I8D3niiRxlY5iI"
-}
-*/
 router.post('/', [
     check('email', 'Please enter valid email').isEmail(),
     check('password', 'Please enter password').exists(),

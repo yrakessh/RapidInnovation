@@ -5,7 +5,6 @@ const Player = require('../../models/Player')
 const { check, validationResult } = require('express-validator');
 
 // @router GET api/auth
-// @access public
 router.get('/', auth, async (req, res) => {
     try {
         let player = [];
@@ -30,31 +29,6 @@ router.get('/', auth, async (req, res) => {
 
 // @router POST api/auth
 // @desc Create Player
-// @access public
-/* Request Body
-{
-    "name": "Rohit Sharma",
-    "code": "RS100",
-    "matches": 100,
-    "won": 75,
-    "lost": 25,
-    "team": "Indian Team",
-    "sport": "Cricket"
-}
-
-Response: - 
-{
-    "name": "Rohit Sharma",
-    "code": "RS100",
-    "matches": 100,
-    "won": 75,
-    "team": "Indian Team",
-    "sport": "Cricket",
-    "coach": "61722433ee5f05e200a05793",
-    "_id": "617238ee8b0aad5e2eaa9534",
-    "__v": 0
-}
-*/
 router.post('/', auth, [
     check('name', 'Name is required').not().isEmpty(),
     check('code', 'Unique Player Code is required').not().isEmpty(),
@@ -78,6 +52,7 @@ router.post('/', auth, [
 
         player = new Player({name, code, matches, won, lost, team, sport, coach: req.user.id});
         await player.save();
+        // player = await Player.findById(player._id).populate('coach',['name','email']);
 
         res.json(player)
     } catch (error) {
