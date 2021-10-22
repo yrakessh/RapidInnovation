@@ -7,21 +7,20 @@ const config = require('config')
 const bcrypt = require('bcryptjs');
 const { check, validationResult } = require('express-validator');
 
-// @router GET api/auth
-// @access public
 router.get('/', auth, async (req, res) => {
     try {
-        // console.log("Request User-> ", req.user);
-        const user = await User.findById(req.user.id).select('-password');
-        res.json(user);
+        if(req.user.role === 'admin') {
+            const user = await User.find().select('-password');
+            res.json(user);
+        } else {
+            return res.status(400).json({errors: [{ msg: "User Unauthorized" }]})
+        }
     } catch (error) {
         console.log(error.message);
         res.status(500).send('Server Error')
     }
 })
 
-// @router POST api/auth
-// @desc Register User
 router.post('/', [
     check('email', 'Please enter valid email').isEmail(),
     check('password', 'Please enter password').exists(),

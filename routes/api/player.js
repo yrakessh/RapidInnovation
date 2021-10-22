@@ -4,7 +4,6 @@ const auth = require('../../middleware/auth')
 const Player = require('../../models/Player')
 const { check, validationResult } = require('express-validator');
 
-// @router GET api/auth
 router.get('/', auth, async (req, res) => {
     try {
         let player = [];
@@ -27,8 +26,6 @@ router.get('/', auth, async (req, res) => {
     }
 })
 
-// @router POST api/auth
-// @desc Create Player
 router.post('/', auth, [
     check('name', 'Name is required').not().isEmpty(),
     check('code', 'Unique Player Code is required').not().isEmpty(),
